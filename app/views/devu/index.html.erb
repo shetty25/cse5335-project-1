@@ -1,0 +1,51 @@
+<h2>Home</h2>
+<p>Click the button for information</p>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp">
+		</script>
+
+	<body>
+		<input type = button method="get" id = "data" value="Students"/>
+
+		<div>
+			<table id="content"></table>
+		</div>
+		<div id="map-canvas" style="width: 500px; height: 400px;"></div>
+		<script type="text/javascript">
+			var locations=[
+				[32.7290878, -97.1082488, "John,Lipscomb Hall"],
+				[32.730842, -97.1106987,  "Raj,Brazos House"],
+				[32.730383, -97.1170062,  "Mark,Trinity House"]
+			];
+			function initialize()
+			{	
+				var map=new google.maps.Map(document.getElementById('map-canvas'),{
+					center: new google.maps.LatLng(32.730468,-97.114774),
+					zoom: 14,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				});
+			
+			var infowindow = new google.maps.InfoWindow();
+			var marker,i;
+
+			for(i=0;i<locations.length;i++){
+				var p=locations[i];
+				marker= new google.maps.Marker({
+					position: new google.maps.LatLng(p[0],p[1]),
+					map: map,
+					title: p[2]
+				});
+				
+				infowindow = new google.maps.InfoWindow();
+						
+				google.maps.event.addListener(marker,'click',(function(dot,heading) {
+					return function(){
+						infowindow.setContent(heading);
+						infowindow.open(map,dot);
+					}
+				})(marker,p[2]));
+				}
+			}
+		
+		google.maps.event.addDomListener(window, 'load', initialize);	
+		</script>
+	</body>

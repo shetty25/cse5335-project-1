@@ -1,0 +1,8 @@
+table,td, th{ border-collapse: collapse; border-radius: 40%; border: 2px solid blue; }
+th,td { padding: 8px; text-align: center;}
+th {color:red ;}
+h2{color:violet; font-family:Cursive}
+
+// Place all the styles related to the devu controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
