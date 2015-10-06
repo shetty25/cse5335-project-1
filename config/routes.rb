@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   
-  get "devu/index"
+  get "shru/index"
 
-  root :to => 'devu#index'
+  root :to => 'shru#index'
 
   resources :details
-  resources :students
+  resources :assistants
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
