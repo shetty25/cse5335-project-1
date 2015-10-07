@@ -4,7 +4,8 @@ $(document).ready(function() {
 		
 			$("#data").click(function(){ 
 				// maps();
-				map=new google.maps.Map(document.getElementById('map-canvas'),{
+				map = new google.maps.Map(document.getElementById('map-canvas'),
+				{
 					center: new google.maps.LatLng(32.730468,-97.114774),
 					zoom: 14,
 					mapTypeId: google.maps.MapTypeId.ROADMAP
