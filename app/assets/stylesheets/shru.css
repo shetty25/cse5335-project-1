@@ -1,6 +1,6 @@
 body{ background-color: #DAA520;}
 table,td, th{
-    border:solid black;
+    border:#000000;
     border-collapse: collapse;
     text-align: center;
     font-family:candara;
@@ -12,7 +12,7 @@ th {background-color:#997316;
 h2{
  font-size:200%;
   font-family:"marker felt"; 
-  color: solid black;
+  color: #000000;
   font-size: 50px;
   font-style: bold;
   line-height: 50px;
