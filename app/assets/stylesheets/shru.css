@@ -1,6 +1,6 @@
 body{ background-color: #DAA520;}
 table,td, th{
-    border:#000000;
+    border:solid black;
     border-collapse: collapse;
     text-align: center;
     font-family:candara;
